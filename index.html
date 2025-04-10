@@ -1,1 +1,47 @@
+<html>
+<head>
+    <title>Clicker</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+   
+    </head>
 
+
+    <body>
+        <h1>Clique e ganhe pontos</h1>
+
+      <p class="highscore">Pontos: 0</p>
+
+        <button id ="score">Clique aqui!</button>
+        <button id="buy" >Compre cliques</button>
+        
+        
+
+ <script>
+
+    let score = 0;
+    document.getElementById("score").addEventListener("click", function() {
+        score++;
+        document.querySelector(".highscore").innerText = "Pontos: " + score;
+    });
+
+    document.getElementById("buy").addEventListener("click", function() {
+        if (score >= 10) {
+            score -= 10;
+            document.querySelector(".highscore").innerText = "Pontos: " + score;
+            alert("Você comprou um clique extra!");
+        } else {
+            alert("Você não tem pontos suficientes para comprar cliques.");
+        }
+    });
+
+ </script>
+    </body>
+
+<footer>
+
+
+
+</footer>
+
+
+</html>
